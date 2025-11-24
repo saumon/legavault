@@ -698,6 +698,7 @@ ul {
     .hero-actions {
         flex-direction: column;
         gap: 15px;
+        align-items: center;
     }
 
     .hero-actions .btn {
