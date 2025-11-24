@@ -649,10 +649,29 @@ ul {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+    /* Typography */
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    .cta-box h2 {
+        font-size: 2rem;
+    }
+
+    /* Navigation */
     .nav-links {
         position: fixed;
         top: 0;
@@ -675,19 +694,231 @@ ul {
         z-index: 1001;
     }
 
+    /* Hero Actions */
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Sections */
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    /* Concept Grid */
+    .concept-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    /* Features */
     .feature-row {
         flex-direction: column;
         text-align: center;
-        gap: 40px;
+        gap: 30px;
+        margin-bottom: 60px;
+        width: 100%;
+        /* Ensure full width */
     }
 
     .feature-row.reverse {
         flex-direction: column;
     }
 
+    .feature-visual {
+        width: 100%;
+        /* Force full width for the container */
+    }
+
+    .feature-content h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Visual Placeholders - Reduce height on mobile */
+    .visual-placeholder {
+        height: 200px;
+    }
+
+    /* Tombstone - smaller on mobile */
+    .encryption-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .encryption-visual::before {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 80px;
+        height: 110px;
+        font-size: 0.9rem;
+        border-radius: 40px 40px 8px 8px;
+    }
+
+    /* Ghost - smaller on mobile */
+    .transmission-visual {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .transmission-visual::after {
+        content: '' !important;
+        display: block !important;
+        position: relative !important;
+        /* Reset absolute */
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        order: 1 !important;
+        /* Body first */
+        width: 70px !important;
+        height: 85px !important;
+        background-color: #e2e8f0 !important;
+        border-radius: 50px 50px 0 0 !important;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2) !important;
+        background-image: radial-gradient(circle at 35% 40%, #0f172a 6px, transparent 7px),
+            radial-gradient(circle at 65% 40%, #0f172a 6px, transparent 7px) !important;
+        z-index: 10 !important;
+        margin-bottom: -5px !important;
+        /* Slight overlap to prevent gap */
+    }
+
+    .transmission-visual::before {
+        content: '' !important;
+        display: block !important;
+        position: relative !important;
+        /* Reset absolute */
+        bottom: auto !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        order: 2 !important;
+        /* Tail second */
+        width: 70px !important;
+        height: 15px !important;
+        background: radial-gradient(circle at 7px 0, transparent 7px, #e2e8f0 8px) repeat-x !important;
+        background-size: 14px 14px !important;
+        background-position: -7px 0 !important;
+        z-index: 10 !important;
+    }
+
+    /* Skull - smaller on mobile */
+    .inventory-visual {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .inventory-visual::before {
+        content: '' !important;
+        display: block !important;
+        position: relative !important;
+        width: 70px !important;
+        height: 60px !important;
+        background-color: #cbd5e1 !important;
+        background-image: radial-gradient(circle at 30% 50%, #0f172a 8px, transparent 9px),
+            radial-gradient(circle at 70% 50%, #0f172a 8px, transparent 9px),
+            radial-gradient(circle at 50% 75%, #0f172a 4px, transparent 5px) !important;
+        z-index: 10 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .inventory-visual::after {
+        content: '' !important;
+        display: block !important;
+        position: relative !important;
+        bottom: auto !important;
+        width: 45px !important;
+        height: 15px !important;
+        background: repeating-linear-gradient(90deg, #cbd5e1, #cbd5e1 7px, #94a3b8 7px, #94a3b8 9px) !important;
+        border-radius: 0 0 8px 8px !important;
+        z-index: 10 !important;
+        margin-top: -2px !important;
+        /* Slight overlap */
+    }
+
+    /* Atmosphere adjustments */
+    .moon {
+        width: 80px;
+        height: 80px;
+        top: 80px;
+        right: 10%;
+    }
+
+    .moon::before {
+        width: 15px;
+        height: 15px;
+        box-shadow: 30px 8px 0 -4px rgba(15, 23, 42, 0.1),
+            8px 30px 0 -2px rgba(15, 23, 42, 0.1);
+    }
+
+    .cloud {
+        opacity: 0.7;
+    }
+
+    .cloud-1 {
+        width: 200px;
+        height: 70px;
+    }
+
+    .cloud-2 {
+        width: 250px;
+        height: 80px;
+    }
+
+    .cloud-3 {
+        width: 220px;
+        height: 75px;
+    }
+
+    /* Glows */
+    .glow-1,
+    .glow-2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Audience */
+    .audience-list {
+        gap: 15px;
+    }
+
+    .audience-item {
+        padding: 15px;
+    }
+
+    /* CTA */
+    .cta-box {
+        padding: 60px 20px;
+    }
+
+    /* Footer */
     .footer-content {
         flex-direction: column;
         gap: 30px;
         text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
     }
 }
